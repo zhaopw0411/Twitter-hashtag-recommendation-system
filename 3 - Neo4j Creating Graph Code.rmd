@@ -1,0 +1,58 @@
+---
+title: "Twitter neo4J Connection"
+author: "Peiwen Zhao"
+date: "October 28, 2017"
+output: html_document
+---
+
+
+```{r loading data}
+
+library(dplyr)
+setwd("C:/Users/PC/Desktop/Academics/Fall/MSBA 6330 Big Data/Project/Twitter Data")
+tweets <- read.csv("tweets_final_new.csv")
+```
+
+```{r Extracting Hashtag}
+
+library(stringr)
+
+getHashtags = function(twit) {
+  hashtags = unlist(str_extract_all(twit, regex("(?<=\\s|^)#([:alnum:]+?)(?=\\b|$)")))
+  hashtags = tolower(hashtags)
+  
+  if(length(hashtags) > 0) {
+    return(hashtags)
+  } else {
+    return(NULL)
+  }
+}
+```
+
+```{r Create Graph}
+library(RNeo4j)
+
+graph = startGraph("http://localhost:7474/db/data/")
+clear(graph)
+
+addConstraint(graph, "Tweet", "id")
+addConstraint(graph, "Hashtag", "hashtag")
+```
+
+```{r Load Graph Function}
+create_db = function(x) {
+  tweet = getOrCreateNode(graph, "Tweet", id = x$id, text = x$text)
+  
+  hashtags = getHashtags(x$text)
+  
+  if(!is.null(hashtags) & !is.null(tweet)) {
+    hashtag_nodes = lapply(hashtags, function(h) getOrCreateNode(graph, "Hashtag", hashtag = h))
+    lapply(hashtag_nodes, function(h) createRel(tweet, "HASHTAG", h))
+  }
+} 
+```
+
+```{r Create Graph}
+by(tweets[1:nrow(tweets),], 1:nrow(tweets), create_db)
+```
+
