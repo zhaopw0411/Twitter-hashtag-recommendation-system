@@ -5,16 +5,16 @@ In this project we leveraged the power of graph databases and built a twitter ha
 
 Other Link:
 
-Project report: *https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation-System/blob/master/Report.pdf*  
+Project report: *https://github.com/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/Report.pdf*  
 
-Handout: *https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation-System/blob/master/Handout.pdf*
+Handout: *https://github.com/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/Handout.pdf*
 
 
 ## Launch a neo4j instance from AWS marketplace
 
 Implement Neo4j Graph Database - Community Edition on AWS 
 
-![alt text](https://github.umn.edu/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/1.png)
+![alt text](https://github.com/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/1.png)
 
 - Go to neo4j AWS marketplace: *https://aws.amazon.com/marketplace/pp/B071P26C9D?qid=1512270655067&sr=0-1&ref_=srh_res_product_title*
 
@@ -24,14 +24,14 @@ Implement Neo4j Graph Database - Community Edition on AWS
 
   - Click continue
 
-    ![2](https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation-System/blob/master/2.png)
+    ![2](https://github.com/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/2.png)
 
 
 - You can use the one click launch
 
 - Open your neo4j database on the browser. It is available at http://<amazonDNS>:7474, the original password is your instance ID
 
-  ![alt text](https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation-System/blob/master/3.png)
+  ![alt text](https://github.com/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/3.png)
 
 
 - In your command line, ssh into the neo4j database on AWS![4](C:\Users\zhaop\Google Drive\Calrson\Fall\6330 Big Data\Big data project\tech doc\4.png)
@@ -354,7 +354,7 @@ $ jupyter notebook
 
 By default, the server runs on port 8888. If the port is not available, it uses the next available port. The Jupyter terminal shows the port on which the server is listening. Now you are able to connect neo4j and spark together and write queries on Jupyter note book.
 
-![alt text](https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation-System/blob/master/Capture22.PNG)
+![alt text](https://github.com/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/Capture22.PNG)
 
 ## Parse Tweets and upload to AWS Neo4J database
 
@@ -380,10 +380,10 @@ Open neo4j browser on port 7474, now you can play with your graph database!
 
 
 
-![alt text](https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation-System/blob/master/Capture6.PNG)
+![alt text](https://github.com/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/Capture6.PNG)
 
 ## Query from Apache Spark using Scala
 
 - Launch Jupyter from Putty and now on the Jupyter notebook, you can query from your neo4j database
 
-![alt text](https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation-System/blob/master/WhatsApp%20Image%202017-12-04%20at%207.28.43%20PM.jpeg)
+![alt text](https://github.com/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/WhatsApp%20Image%202017-12-04%20at%207.28.43%20PM.jpeg)
