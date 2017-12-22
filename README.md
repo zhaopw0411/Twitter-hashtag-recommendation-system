@@ -14,7 +14,7 @@ Handout: *https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation
 
 Implement Neo4j Graph Database - Community Edition on AWS 
 
-![alt text](https://github.umn.edu/zhao0885/Bigdata-project-Hashtag-Recommendation-System/blob/master/1.png)
+![alt text](https://github.umn.edu/zhaopw0411/Twitter-hashtag-recommendation-system/blob/master/1.png)
 
 - Go to neo4j AWS marketplace: *https://aws.amazon.com/marketplace/pp/B071P26C9D?qid=1512270655067&sr=0-1&ref_=srh_res_product_title*
 
